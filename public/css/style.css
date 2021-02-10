@@ -1,0 +1,378 @@
+:root{
+    --SystemFont: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ECFFEF;
+    overflow: hidden;
+}
+
+.container{
+    background-color: #f9fdf9;
+    border-radius: 25px;
+    height: 350px;
+    width: 500px;
+    left: 7vh;
+    position: relative;
+    top: 76px;
+    padding: 15px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+.img-container{
+    border: 5px dashed #AFE8B6;
+    border-radius: 15px;
+    padding: 10px;
+    width: 460px;
+    height: 310px;
+    position: relative;
+    margin: 0 auto;
+    top: 5px;
+    left: 0%;
+    transition: all 200ms ease;
+}
+img{
+    width: 135px;
+    height: 145px;
+}
+.image{
+    width: 132px;
+    height: 155px;
+    display: inline-block;
+    position: absolute;
+    left: 30vh;
+    margin-top: 3vh;
+    transform-origin: bottom;
+    transition: transform 250ms ease-in-out;
+}
+
+.linkBtn{
+    position: absolute;
+    top: 33vh;
+    left: 25vh;
+}
+
+.inpLink{
+    font-size: 28px;
+    font-family: var(--SystemFont);
+    position: absolute;
+    width: 280px;
+    left: -48px;
+    top: 28px;
+    text-align: center;
+}
+
+#fileInpt{
+    display: none;
+}
+
+.progressDiv{
+    position: relative;
+    display: none;
+    top: 35vh;
+    left: 62px;
+    width: 54.5vh;
+    height: 4px;
+    border: 1px solid rgb(131, 130, 130);
+    border-radius: 5px;
+    font-family: var(--SystemFont);
+}
+.display-on{
+    display: block;
+}
+
+.progressBar{
+    transition: width .25s linear;
+    border-radius: 5px;
+    background-color: rgb(17, 173, 25);
+    height: 100%;
+    width: 0%;
+}
+
+#percent{
+    position: absolute;
+    bottom: 0;
+    left: 5px;
+    font-size: 15px;
+}
+
+span{
+    color: rgb(52, 52, 243);
+    cursor: pointer;
+}
+
+.middle{
+    z-index: 1;
+}
+
+.selected-1{
+    transform: rotate(-43deg) translateX(20px) scale(0.9);
+    filter: grayscale(60%) !important;
+}
+
+.selected-2{
+    transform: translateY(-10px);
+}
+
+.selected-3{
+    transform: rotate(43deg) translateX(-20px) scale(0.9);
+    filter: grayscale(100%) !important;
+}
+
+.img-border{
+    background-color: #BEDCC1;
+    border-color: #248832;
+}
+
+/*mail-container css*/
+.mail-container{
+    visibility: hidden;
+    position: relative;
+    background-color: #f9fdf9;
+    border-radius: 25px;
+    height: 357px;
+    width: 519px;
+    left: 686px;
+    top: -304px;
+    padding: 15px;
+    transition: all 200ms ease;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+.mail-displayOn{
+    visibility: visible;
+}
+
+@keyframes mailBox{
+    0%{opacity: 0.1}
+    10%{opacity: 0.2}    
+    20%{opacity: 0.3}
+    30%{opacity: 0.4}
+    40%{opacity: 0.5}
+    50%{opacity: 0.6}
+    60%{opacity: 0.7}
+    70%{opacity: 0.8}
+    80%{opacity: 0.9}
+    100%{opacity: 1}
+}
+
+.bgImg{
+    position: absolute;
+    height: 422px;
+    width: 408px;
+    top: 5.5%;
+    left: 57%;
+}
+
+.timeWarn{
+    position: absolute;
+    font-size: 20px;
+    font-family: var(--SystemFont);
+    top: 2%;
+    left: 33%;
+}
+
+.clipboard{
+    border: 5px dashed rgb(15, 155, 15);
+    border-radius: 8px;
+    position: relative;
+    height: 12%;
+    width: 92%;
+    top: 15%;
+    left: 4%;
+}
+
+#fileLink{
+    background-color: #F3F3FA;
+    position: absolute;
+    border-width: 0;
+    width: 91%;
+    height: 61%;
+    font-size: 14px;
+    top: 20%;
+    left: 1%;
+}
+
+.copyBtn{
+    background-image: url("../images/copy-regular.svg");
+    background-repeat: no-repeat;
+    background-color: #F3F3FA;
+    position: absolute;    
+    cursor: pointer;
+    border-width: 0;
+    height: 67%;
+    width: 6%;
+    left: 93%;
+    top: 20%;
+}
+
+#para{
+    position: absolute;
+    font-family: var(--SystemFont);
+    font-size: 24px;
+    top: 30%;
+    left: 32%;
+}
+
+.emailInp{
+    border: 1px solid rgb(15, 155, 15);
+    border-radius: 10px;
+    font-family: var(--SystemFont);
+    position: relative;
+    font-size: 23px;
+    height: 52%;
+    top: 31%;
+}
+
+.senderInp{
+    position: absolute;
+    height: 32%;
+    width: 87%;
+    top: 10%;
+    left: 6%;
+}
+
+.mailbox{
+    width: 57%;
+    font-size: 20px;
+    position: absolute;
+    left: 40%;
+    top: 33%;
+    border-width: 0 0 2px 0;
+}
+
+.receiverInp{
+    position: absolute;
+    height: 32%;
+    width: 87%;
+    top: 39%;
+    left: 6%;
+}
+
+.sendBtn{
+    position: absolute;
+    cursor: pointer;
+    width: 40%;
+    line-height: 0px;
+    height: 18%;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: var(--SystemFont);
+    border-radius: 5px;
+    border-width: 0;
+    background-color: rgb(8, 70, 22);
+    color: rgb(172, 235, 170);
+    top: 77%;
+    left: 29%;
+}
+.sendBtn:hover, .downloadBtn:hover{
+    color: rgb(255, 255, 255);
+    border: 1px solid white;
+    opacity: 0.9;
+}
+
+#fileLink:focus, .copyBtn:focus, .mailbox:focus, .downloadBtn:focus{
+    outline: none;
+}
+
+/*download page*/
+.child-container{
+    border: 3px dashed green;
+    border-radius: 10px;
+    height: 95%;
+    width: 97%;
+    position: relative;
+    top: 2%;
+    left: 1%;
+}
+
+.icon-container{
+    position: absolute;
+    height: 42%;
+    width: 95%;
+    top: 0%;
+    color: rgb(129, 194, 129);
+    font-size: 10rem;
+    left: 2.5%;
+    text-align: center;
+}
+
+.info-container{
+    position: absolute;
+    line-height: 15px;
+    font-family: var(--SystemFont);
+    text-align: center;
+    top: 42%;
+    left: 0%;
+    width: 100%;
+    height: 42%;
+}
+
+.msg-info{
+    font-size: 17px;
+}
+
+.downloadBtn{
+    background-color: rgb(10, 107, 33);
+    font-size: 22px;
+    font-family: var(--SystemFont);
+    font-weight: 600;
+    border-width: 0;
+    padding-bottom: 4.5px;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 5px;
+    line-height: 0;
+    top: 87%;
+    left: 30%;
+    height: 10%;
+    width: 40%;
+}
+
+.warning{
+    transition: all 200ms ease;
+    position: absolute;
+    font-size: 28px;
+    font-family: var(--SystemFont);
+    text-align: center;
+    width: auto;
+    height: 9vh;
+    line-height: 0px;
+    font-weight: bolder;
+    top: 83%;
+    left: 40%;
+}
+
+.msg{
+   visibility: hidden;
+}
+
+.addFun{
+    visibility: visible;
+    animation-duration: 7s;
+    animation-name: OKmessage;
+}
+
+@keyframes OKmessage{
+    0% {color: white;}
+    25% {color: green;}
+    75% {color: green;}
+    100% {color: white;}
+  }
+ @keyframes Notmessage{
+   0% {color: white;}
+   25% {color: red;}
+   75% {color: red;}
+   100% {color: white;}
+}
+
+footer{
+    position: absolute;
+    font-family: system-ui;
+    top: 90%;
+    font-size: 14px;
+    opacity: 0.7;
+    left: 43%;
+}

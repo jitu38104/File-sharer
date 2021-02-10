@@ -1,0 +1,58 @@
+<%- include('partials/header') %>
+<body>
+    <img src="/images/cloud.png" alt="no-img" class="bgImg">
+    <div class="container">
+        <div class="img-container dropzone">
+            <div class="image left">
+                <img id="left" src="https://img.icons8.com/plasticine/2x/cloud-file.png" alt="left-image" draggable="false">
+            </div>
+            <div class="image middle">
+                <img id="middle" src="https://img.icons8.com/plasticine/2x/cloud-file.png" alt="middle-image" draggable="false">
+            </div>
+            <div class="image right">
+                <img id="right" src="https://img.icons8.com/plasticine/2x/cloud-file.png" alt="right-image" draggable="false">
+            </div>
+            <input type="file" id="fileInpt">
+            <div class="progressDiv">
+                <p id="percent">Uploading...&nbsp;&nbsp;<span id="rating" style="color: black;"></span></p>
+                <div class="progressBar"></div>
+            </div>
+            <div class="linkBtn">
+                <p class="inpLink">Click here to <span class="browseBtn">browse</span></p> 
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="mail-container">
+            <p class="timeWarn"> Link Expires in 24 hrs </p>
+            <div class="clipboard">
+                <input type="text" name="url" id="fileLink" autocomplete="off">
+                <button class="copyBtn" title="copy"></button>
+            </div>
+            <p id="para">Or Send via Email</p>
+            <div class="emailInp">
+               
+                    <div class="senderInp">
+                        <p>Your email
+                        <input type="email" name="emailFrom" class="mailbox sender-box" autocomplete="off">
+                        </p>
+                        <input type="hidden" name="uuid" value="" class="hiddenInp">
+                    </div>
+                    <div class="receiverInp">
+                        <p>Receiver's email
+                        <input type="email" name="emailTo" class="mailbox reciver-box" autocomplete="off">
+                        </p>
+                    </div>
+                    <button class="sendBtn">Send</button>
+            </div>   
+        </div>
+
+        
+            <div class="warning">            
+                <p class="msg"></p>
+            </div>
+
+    <script src="script/scriptPage.js"></script>
+</body>
+<%- include('partials/footer') %>

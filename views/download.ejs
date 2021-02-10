@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+<body>
+    <div class="container" style="left: 30%;">
+        <div class="child-container">
+            <div class="icon-container">
+                <i class="fa fa-download" aria-hidden="true"></i>
+            </div>
+            <% if (!flag) { %>
+                <div class="info-container" style="top: 60%;">
+                    <h1><%= error %> </h1>
+                </div>
+            <% } else { %>
+            <div class="info-container">
+                <h1>Your file is ready to download</h1>
+                <p class="msg-info">Link expires in 24 hours</p>
+                <h3 class="filename"><%= item.filename %></h3>
+                <p class="filesize msg-info"><%= item.size %> </p>
+            </div>
+            <form action="<%= item.link %>" method="GET">
+                <button class="downloadBtn" title="Download your file">Download</button>
+            </form>
+            <% } %>
+        </div>
+    </div>
+</body>
+<%- include('partials/footer') %>
