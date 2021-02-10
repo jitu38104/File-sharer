@@ -64,7 +64,7 @@ sendBtn.addEventListener("click", (e)=>{
 
 //xhr post uploading file...
 const uploadFile = ()=>{
-    const url = "http://localhost:3000/api/files";
+    const url = "https://file-sharer-app.herokuapp.com/api/files";
     const method = "POST";
 
     const file = fileInpt.files[0];
@@ -94,7 +94,7 @@ const uploadFile = ()=>{
 
 //for email details post
 const emailOptions = ()=>{
-    const url = "http://localhost:3000/api/files/send";
+    const url = "https://file-sharer-app.herokuapp.com/api/files/send";
     const method = "POST";
     const emailObj = {
         uuid: document.querySelector(".hiddenInp").value,
