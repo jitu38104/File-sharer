@@ -9,7 +9,7 @@ const delItem = async()=>{
     
     if(items.length){
         try {
-            items.forEach(element => {
+            items.forEach(async(element) => {
                 console.log(`${element.fileName} is going to be deleted`); 
                 fs.unlinkSync(element.path);    //sequence wise by unlinkSync method
                 await element.remove(); //eventually file gets removed if it is exist more than 24hrs
