@@ -10,9 +10,13 @@ const delItem = async()=>{
     if(items.length){
         try {
             items.forEach(async(element) => {
-                console.log(`${element.fileName} is going to be deleted`); 
+                console.log(`${element.fileName} is going to be deleted from upload`); 
                 fs.unlinkSync(element.path);    //sequence wise by unlinkSync method
-                await element.remove(); //eventually file gets removed if it is exist more than 24hrs
+                await model.deleteOne({uuid: element.uuid}, (err)=>{
+                    if(!err){
+                        console.log(`${element.uuid} is deleted from database`);
+                    } else { console.log(err);}
+                }); //eventually file gets removed if it is exist more than 24hrs
             });
         } catch (err) {
             console.log(`An error happend while deleting the item: ${err}`);
